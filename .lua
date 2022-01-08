@@ -47,6 +47,15 @@ local c = w:CreateFolder("Teleport")
 
 b:DestroyGui()
 
+b:Button("Anti AFK",function()
+    local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+end)
+
 b:Toggle("Auto Farming",function(bool)
     getgenv().auto = bool
     print(shared.toggle)
@@ -62,17 +71,6 @@ b:Toggle("Auto Sell",function(bool)
     doSell();
     end
 end)
-
-b:Button("Anti AFK",function()
-    local vu = game:GetService("VirtualUser")
-game:GetService("Players").LocalPlayer.Idled:connect(function()
-   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-   wait(1)
-   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-end)
-end)
-
-
 
 
 c:Button("Sell Zone",function()
