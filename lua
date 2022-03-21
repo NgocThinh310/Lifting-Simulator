@@ -12,7 +12,7 @@
 
 
 UI:https://v3rmillion.net/showthread.php?tid=1040650&highlight=wally+ui
-Script: NgocThinh310
+
 
 ]]--
 
